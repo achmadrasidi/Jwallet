@@ -97,7 +97,7 @@ export default function Home() {
                     <div className="col-md-4">
                       <Image src={require("../assets/img/download-vec.png")}></Image>
                       <h3 className={`${styles.cardTitle}`}>Easy Download</h3>
-                      <p className={`${styles.cardDesc} mt-3`}>Zwallet is 100% totally free to use it&apos;'s now available on Google Play Store and App Store.</p>
+                      <p className={`${styles.cardDesc} mt-3`}>Zwallet is 100% totally free to use it&apos;s now available on Google Play Store and App Store.</p>
                     </div>
                   </div>
                 </div>
