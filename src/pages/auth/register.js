@@ -101,7 +101,7 @@ const Register = () => {
                             Sign Up
                           </button>
                           <p className={`${styles.haveAccText} mt-5`}>
-                            Already have an account? Let's
+                            Already have an account? Let&apos;s
                             <span
                               className={`${styles.signUpText}`}
                               onClick={() => {

@@ -121,7 +121,7 @@ const Transfer = () => {
                     />
                   </div>
                 </div>
-                <div class=" mt-3 d-flex justify-content-end gap-1">
+                <div className=" mt-3 d-flex justify-content-end gap-1">
                   <DropdownButton variant="secondary" className="dropdown-sort" title={sort}>
                     <Dropdown.Item
                       eventKey="1"
@@ -162,8 +162,9 @@ const Transfer = () => {
               {error || !users.length ? (
                 <p className={`${styles.errorAuth} mb-5`}>{error || "No User Found"}</p>
               ) : (
-                users.map((user) => (
+                users.map((user, i) => (
                   <div
+                    key={i}
                     className={`row mt-0 m-5 pt-4 p-3 ${styles.searchItem}`}
                     onClick={() => {
                       router.push({

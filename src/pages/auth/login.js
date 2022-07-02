@@ -115,7 +115,7 @@ const Login = () => {
                           </button>
                           <p className={`${styles.haveAccText} mt-5`}>
                             {" "}
-                            Don't have an account? Let's{" "}
+                            Don&apos;t have an account? Le&apos;s{" "}
                             <span
                               className={`${styles.signUpText}`}
                               onClick={() => {

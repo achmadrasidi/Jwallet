@@ -81,7 +81,7 @@ export default function Home() {
                     <span className={`${styles.reasonWhy}`}>Why</span> Choose FazzPay?
                   </h2>
                   <p className={`${styles.reasonDesc} mt-3`}>
-                    We have some great features from the application and it's totally free <br /> to use by all users around the world.
+                    We have some great features from the application and it&apos;s totally free <br /> to use by all users around the world.
                   </p>
                   <div className="row mt-5">
                     <div className="col-md-4">
@@ -97,7 +97,7 @@ export default function Home() {
                     <div className="col-md-4">
                       <Image src={require("../assets/img/download-vec.png")}></Image>
                       <h3 className={`${styles.cardTitle}`}>Easy Download</h3>
-                      <p className={`${styles.cardDesc} mt-3`}>Zwallet is 100% totally free to use it's now available on Google Play Store and App Store.</p>
+                      <p className={`${styles.cardDesc} mt-3`}>Zwallet is 100% totally free to use it&apos;'s now available on Google Play Store and App Store.</p>
                     </div>
                   </div>
                 </div>
@@ -155,7 +155,7 @@ export default function Home() {
                       {" "}
                       <span className={`${styles.featCardNum}`}>2.</span> Data Secured
                     </h3>
-                    <p className={`${styles.featCardDesc} ms-3`}>All your data is secured properly in our system and it's encrypted.</p>
+                    <p className={`${styles.featCardDesc} ms-3`}>All your data is secured properly in our system and it&apos;s encrypted.</p>
                   </div>
                   <div className={`${styles.featCard} py-2`}>
                     <h3 className={`${styles.featCardTitle} ms-3 mt-3`}>
@@ -180,15 +180,15 @@ export default function Home() {
                     What Users are <span className={`${styles.reasonWhy}`}>Saying.</span>
                   </h2>
                   <p className={`${styles.featCardDesc}`}>
-                    We have some great features from the application and it's totally free <br /> to use by all users around the world.
+                    We have some great features from the application and it&apos;s totally free <br /> to use by all users around the world.
                   </p>
                   <div className={`${styles.cardTestimony} mt-5 py-5`}>
                     <Image src={require("../assets/img/alex.png")}></Image>
                     <h3 className={`${styles.testiName} mt-3`}>Alex Hansinburg</h3>
                     <h5 className={`${styles.testiJob} mt-3`}>Designer</h5>
                     <p className={`${styles.testiComment} mt-5`}>
-                      “This is the most outstanding app that I've ever try in my live, this app is such an amazing masterpiece and <br /> it's suitable for you who is bussy with their bussiness and must transfer money to another person aut
-                      there.
+                      “This is the most outstanding app that I&apos;ve ever try in my live, this app is such an amazing masterpiece and <br /> it&apos;s suitable for you who is bussy with their bussiness and must transfer money to another
+                      person aut there.
                       <br /> Just try this app and see the power!”
                     </p>
                   </div>

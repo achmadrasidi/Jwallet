@@ -112,7 +112,7 @@ const Profile = () => {
 
                   <h2 className={`${styles.nameText} mt-4`}>{`${user.firstName} ${user.lastName}`}</h2>
                   <p className={`${styles.phoneText} mt-2`}>{user.noTelp ? "0" + user.noTelp : "No Phone Number"}</p>
-                  <div class="d-flex flex-column">
+                  <div className="d-flex flex-column">
                     <div
                       className={`${styles.profileButton} p-4 mt-4 d-flex align-items-center justify-content-between`}
                       onClick={() => {
@@ -147,7 +147,7 @@ const Profile = () => {
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4"></div>
+                <div className="col-md-4"></div>
               </div>
             </div>
           </div>

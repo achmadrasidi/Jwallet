@@ -63,7 +63,7 @@ const NewPassword = () => {
                       <div className="col-md-1"></div>
                       <div className="col-md-9  my-5">
                         <h2 className={`${styles.titleRight}`}>
-                          Did You Forgot Your Password? <br /> Don't Worry, You Can Reset Your <br /> Password In a Minutes.
+                          Did You Forgot Your Password? <br /> Don&apos;t Worry, You Can Reset Your <br /> Password In a Minutes.
                         </h2>
                         <p className={`${styles.descRight} mt-4`}>Now you can create a new password for your Zwallet account. Type your password twice so we can confirm your new passsword.</p>
                         <form

@@ -16,7 +16,7 @@ const Status = () => {
               <div className="text-center mt-5">
                 <CheckCircleFill size={80} color="#FF5B37" />
                 <h2 className={`${styles.successTitle} mt-4 mb-5`}>Transfer Failed</h2>
-                <p className={`${styles.errorDesc}`}>We can't transfer your money at the moment, we recommend you to check your internet connection and try again.</p>
+                <p className={`${styles.errorDesc}`}>We can&apos;t transfer your money at the moment, we recommend you to check your internet connection and try again.</p>
               </div>
               <div className={`row mt-0 m-5 mb-4 pt-4 p-3 ${styles.confirmTrans}`}>
                 <div className="col-md-12">

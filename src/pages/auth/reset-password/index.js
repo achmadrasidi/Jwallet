@@ -54,7 +54,7 @@ const ResetPassword = () => {
                       <div className="col-md-1"></div>
                       <div className="col-md-9  my-5">
                         <h2 className={`${styles.titleRight}`}>
-                          Did You Forgot Your Password? <br /> Don't Worry, You Can Reset Your <br /> Password In a Minutes.
+                          Did You Forgot Your Password? <br /> Don&apos;t Worry, You Can Reset Your <br /> Password In a Minutes.
                         </h2>
                         <p className={`${styles.descRight} mt-4`}>To reset your password, you must type your e-mail and we will send a link to your email and you will be directed to the reset password screens.</p>
                         <form

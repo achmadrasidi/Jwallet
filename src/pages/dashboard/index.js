@@ -210,8 +210,8 @@ const Dashboard = () => {
               {!history.length ? (
                 <h3 className={`${styles.transName} text-center mt-5`}>No history Found</h3>
               ) : (
-                history.map((item) => (
-                  <div className="row mb-3">
+                history.map((item, i) => (
+                  <div className="row mb-3" key={i}>
                     <div className="col-md-6 d-flex gap-3 mt-4">
                       <div className="">
                         <Image src={item.image ? `${process.env.CLOUDINARY_URL}${item.image}` : require("assets/img/default-img.webp")} className={styles.defaultImg} width={50} height={50} />

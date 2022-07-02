@@ -92,8 +92,8 @@ const History = () => {
               {!history.length ? (
                 <h3 className={`${styles.transName} text-center mt-5`}>No History Found</h3>
               ) : (
-                history.map((item) => (
-                  <div className="row my-4">
+                history.map((item, i) => (
+                  <div className="row my-4" key={i}>
                     <div className="col-md-1"></div>
                     <div className="col-md-5 d-flex gap-3">
                       <div className="">

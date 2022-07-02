@@ -67,7 +67,7 @@ const Pin = () => {
                         ) : (
                           <div className="col-md-9 my-5">
                             <h2 className={`${styles.titleRight}`}>Secure Your Account, Your Wallet, and Your Data With 6 Digits PIN That You Created Yourself.</h2>
-                            <p className={`${styles.descRight} mt-4`}>Create 6 digits pin to secure all your money and your data in FazzPay app. Keep it secret and don't tell anyone about your FazzPay account password and the PIN.</p>
+                            <p className={`${styles.descRight} mt-4`}>Create 6 digits pin to secure all your money and your data in FazzPay app. Keep it secret and don&apos;t tell anyone about your FazzPay account password and the PIN.</p>
                             <p className={`${styles.descRight} mt-4`}>Your PIN was successfully created and you can now access all the features in FazzPay.</p>
                             <form
                               onSubmit={confirmPin}
