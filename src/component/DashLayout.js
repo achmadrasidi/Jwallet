@@ -87,10 +87,10 @@ export const DashLayout = ({ children, title }) => {
               </div>
 
               <div className="col-md-8 text-center mt-5 mb-4 d-flex justify-content-end align-items-center gap-4">
-                <Image src={user.image ? `${process.env.CLOUDINARY_URL}${user.image}` : require("../assets/img/default-img.webp")} width={50} height={50} className={`${styles.imageDash}`}></Image>
+                <Image src={uset && user.image ? `${process.env.CLOUDINARY_URL}${user.image}` : require("../assets/img/default-img.webp")} width={50} height={50} className={`${styles.imageDash}`}></Image>
                 <div>
-                  <h2 className={`${styles.nameDash} m-0`}>{`${user.firstName ? user.firstName : "John"} ${user.lastName ? user.lastName : "Doe"}`}</h2>
-                  <p className={`${styles.phoneDash} m-0`}>{user.noTelp ? `0${user.noTelp}` : "No Phone Number"}</p>
+                  <h2 className={`${styles.nameDash} m-0`}>{`${user && user.firstName ? user.firstName : "John"} ${user.lastName ? user.lastName : "Doe"}`}</h2>
+                  <p className={`${styles.phoneDash} m-0`}>{user && user.noTelp ? `0${user.noTelp}` : "No Phone Number"}</p>
                 </div>
                 <OverlayTrigger trigger="click" rootClose placement="bottom" overlay={popover}>
                   <Bell size={30} className={`${styles.bellDash}`}></Bell>
