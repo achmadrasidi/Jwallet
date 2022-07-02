@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
   reactStrictMode: false,
   env: {
     API_HOST: "https://fazzpay.herokuapp.com",
@@ -9,12 +8,9 @@ const nextConfig = {
   images: {
     domains: ["res.cloudinary.com"],
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;
-=======
-  reactStrictMode: true,
-}
-
-module.exports = nextConfig
->>>>>>> d145bb6906cede3a8371dae9ae6b35ba7ffd8f4d
