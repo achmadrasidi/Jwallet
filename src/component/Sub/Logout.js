@@ -26,8 +26,9 @@ const Logout = ({ show, onClose, setShow }) => {
               setShow(false);
               dispatch(userLogout());
               dispatch(removetransaction());
-              ToastMessage({ type: "success", message: "You have successfully logged out" });
+
               setTimeout(() => {
+                ToastMessage({ type: "success", message: "You have successfully logged out" });
                 router.push("/");
               }, 2000);
             }}
