@@ -1,15 +1,18 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/globals.css";
 import { Provider } from "react-redux";
-import { store, persistor } from "reduxStore/store";
 import { PersistGate } from "redux-persist/integration/react";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Loading from "component/Sub/Loading";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useStore } from "reduxStore/store";
+import { persistStore } from "redux-persist";
 
 function MainApp({ Component, pageProps }) {
+  const reduxStore = useStore(pageProps.initialReduxState);
+  const persistor = persistStore(reduxStore);
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -33,11 +36,11 @@ function MainApp({ Component, pageProps }) {
   }, [router]);
   return (
     <>
-      <Provider store={store}>
+      {loading && <Loading />}
+      <ToastContainer position="top-right" theme="colored" autoClose={8000} hideProgressBar={false} newestOnTop={false} draggable={false} pauseOnVisibilityChange closeOnClick pauseOnHover />
+      <Provider store={reduxStore}>
         <PersistGate loading={null} persistor={persistor}>
-          {loading && <Loading />}
           <Component {...pageProps} />
-          <ToastContainer position="top-right" theme="colored" autoClose={8000} hideProgressBar={false} newestOnTop={false} draggable={false} pauseOnVisibilityChange closeOnClick pauseOnHover />
         </PersistGate>
       </Provider>
     </>

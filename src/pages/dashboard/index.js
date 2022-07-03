@@ -94,7 +94,7 @@ const Dashboard = () => {
     (async () => {
       setLoading(true);
       try {
-        const result = await axios.get(`${process.env.API_HOST}/transaction/history?page=1&limit=4&filter=WEEK`, { headers: { Authorization: `Bearer ${token}` } });
+        const result = await axios.get(`${process.env.API_HOST}/transaction/history?page=1&limit=4&filter=MONTH`, { headers: { Authorization: `Bearer ${token}` } });
         const { data } = result.data;
         setLoading(false);
         setHistory(data);
@@ -136,8 +136,8 @@ const Dashboard = () => {
           <div className={`row ${styles.midContentDashTop} mb-4`}>
             <div className="col-md-6 mb-3">
               <p className={`${styles.balanceTitle} mt-4`}>Balance</p>
-              <h2 className={`${styles.balanceAcc}`}>{user && user.balance ? currencyFormatter.format(Number(user.balance)) : "Rp 0"}</h2>
-              <p className={`${styles.balanceTitle}`}>{user && user.noTelp ? "0" + user.noTelp : "No Phone Number"}</p>
+              <h2 className={`${styles.balanceAcc}`}>{user.balance ? currencyFormatter.format(Number(user.balance)) : "Rp 0"}</h2>
+              <p className={`${styles.balanceTitle}`}>{user.noTelp ? "0" + user.noTelp : "No Phone Number"}</p>
             </div>
             <div className="col-md-6 text-end">
               <button

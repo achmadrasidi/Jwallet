@@ -4,8 +4,9 @@ import thunk from "redux-thunk";
 import { configureStore } from "@reduxjs/toolkit";
 
 import storage from "redux-persist/lib/storage";
-import { persistReducer, persistStore } from "redux-persist";
+import { persistReducer } from "redux-persist";
 import { transReducer } from "./Reducers/transReducer";
+import { useMemo } from "react";
 
 const persistConfig = {
   key: "root",
@@ -18,14 +19,34 @@ const persistedReducer = persistReducer(persistConfig, combineReducer);
 
 const middleware = [thunk];
 
-export const store = configureStore({
-  reducer: {
-    persist: persistedReducer,
-    userRegist: userRegisterReducer,
-    userLogout: userLogoutReducer,
-  },
-  middleware,
-  devTools: true,
-});
+const createStore = (preloadedState) => {
+  return configureStore({
+    reducer: {
+      persist: persistedReducer,
+      userRegist: userRegisterReducer,
+      userLogout: userLogoutReducer,
+    },
+    middleware,
+    devTools: true,
+    preloadedState,
+  });
+};
+let store;
+export const initialiseStore = (preloadedState) => {
+  let _store = store ?? createStore(preloadedState);
 
-export const persistor = persistStore(store);
+  if (preloadedState && store) {
+    _store = createStore({ ...store.getState(), ...preloadedState });
+    store = undefined;
+  }
+
+  if (typeof window === "undefined") return _store;
+
+  if (!store) store = _store;
+
+  return _store;
+};
+
+export const useStore = (initialState) => {
+  return useMemo(() => initialiseStore(initialState), [initialState]);
+};
