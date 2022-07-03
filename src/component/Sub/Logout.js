@@ -30,7 +30,7 @@ const Logout = ({ show, onClose, setShow }) => {
               setTimeout(() => {
                 ToastMessage({ type: "success", message: "You have successfully logged out" });
                 router.push("/");
-              }, 2000);
+              }, 1500);
             }}
           >
             Yes
