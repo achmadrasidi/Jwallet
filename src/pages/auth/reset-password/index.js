@@ -25,7 +25,7 @@ const ResetPassword = () => {
     setLoading(true);
     const body = {
       email,
-      linkDirect: "http://localhost:3000/auth/reset-password",
+      linkDirect: "https://jwallet.vercel.app/auth/reset-password",
     };
     axios
       .post(`${process.env.API_HOST}/auth/forgot-password`, body)
