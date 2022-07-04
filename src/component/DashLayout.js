@@ -16,7 +16,7 @@ export const DashLayout = ({ children, title }) => {
   const [history, setHistory] = useState([]);
   const [show, setShow] = useState(false);
   const [showLogout, setShowLogout] = useState(false);
-  const user = useSelector((state) => state.persist.user.userDetail);
+  const user = useSelector((state) => state.persist.user.userDetail) || {};
   const { token } = useSelector((state) => state.persist.user.userInfo);
   const router = useRouter();
   const currencyFormatter = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 });
