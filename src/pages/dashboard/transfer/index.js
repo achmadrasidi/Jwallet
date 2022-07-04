@@ -24,8 +24,6 @@ const Transfer = () => {
   const router = useRouter();
 
   useEffect(() => {
-    router.query = "";
-
     (async () => {
       setError(null);
       setLoading(true);
@@ -117,6 +115,9 @@ const Transfer = () => {
                         e.preventDefault();
                         if (e.key === "Enter") {
                           setSearch(e.target.value);
+                          setPage(1);
+                          setLimit(5);
+                          setStart(0);
                         }
                       }}
                       placeholder="Search receiver here"
