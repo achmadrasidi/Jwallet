@@ -24,6 +24,8 @@ const Transfer = () => {
   const router = useRouter();
 
   useEffect(() => {
+    router.query = "";
+
     (async () => {
       setError(null);
       setLoading(true);
