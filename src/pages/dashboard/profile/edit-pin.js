@@ -61,7 +61,7 @@ const EditPin = () => {
       {loading && <Loading />}
 
       <DashLayout title={"Zwallet - Edit Profile Phone"}>
-        <div className="col-md-8 my-5 ms-4">
+        <div className="col-md-8 my-5 ms-4" id={styles.dashTop}>
           <div className="row">
             <div className={`col-md-12 ${styles.midContentDashPhone}`}>
               <div className="row mt-0 m-5 mb-2 pt-4 p-3 ps-0">

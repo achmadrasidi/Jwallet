@@ -1,3 +1,35 @@
+@media (max-width: 768px) {
+  .botRightDesc {
+    flex: 1;
+    justify-content: space-evenly;
+  }
+  #topDashContent {
+    justify-content: center !important;
+    margin-top: 0 !important;
+  }
+  .leftContentDash {
+    width: 100% !important;
+    margin-bottom: 0 !important;
+  }
+  .leftTitleLogout {
+    margin-top: 5% !important;
+  }
+  #dashTop {
+    margin-left: 0 !important;
+  }
+  .transferButton {
+    margin-bottom: 20px !important;
+    margin-top: 0 !important;
+  }
+  #midContentDashBot {
+    margin-top: 5%;
+    text-align: center;
+  }
+  #historyItemDash {
+    justify-content: center;
+  }
+}
+
 .titleDash {
   font-family: "Nunito Sans";
   font-style: normal;
@@ -643,6 +675,9 @@ input.detailInput:focus {
 }
 .inputPhone {
   border: none;
+}
+.inputPhone::placeholder {
+  color: #a9a9a9cc;
 }
 input.inputPhone:hover,
 input.inputPhone:active,

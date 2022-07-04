@@ -111,7 +111,7 @@ const TransferDetail = () => {
     <>
       {loading && <Loading />}
       <DashLayout title={"Zwallet - Transfer Detail"}>
-        <div className="col-md-8 my-5 ms-4">
+        <div className="col-md-8 my-5 ms-4" id={styles.dashTop}>
           <div className="row">
             <div className={`col-md-12 ${styles.midContentDashBot}`}>
               <div className="row p-5 pb-4">

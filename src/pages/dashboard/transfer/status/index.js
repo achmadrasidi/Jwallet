@@ -30,7 +30,7 @@ const Status = () => {
   return (
     <>
       <DashLayout title={"Zwallet - Transfer Status"}>
-        <div className="col-md-8 my-5 ms-4">
+        <div className="col-md-8 my-5 ms-4" id={styles.dashTop}>
           <div className="row">
             <div className={`col-md-12 ${styles.midContentDashBot}`}>
               <div className="text-center mt-5">

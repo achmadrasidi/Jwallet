@@ -139,8 +139,8 @@ export default function Home() {
                 <div className="col-md-6">
                   <Image src={require("../assets/img/double-phone.png")} />
                 </div>
-                <div className="col-md-6 mt-5 pt-5">
-                  <h2 className={`${styles.reasonTitle}`}>
+                <div className="col-md-6 mt-5 pt-5" id={`${styles.featureLayout}`}>
+                  <h2 className={`${styles.featureTitle}`}>
                     All The <span className={`${styles.reasonWhy}`}>Great</span> <br /> FazzPay Features.
                   </h2>
                   <div className={`${styles.featCard} py-2 mt-5`}>
@@ -204,7 +204,7 @@ export default function Home() {
             <div className="container-fluid">
               <div className="row">
                 <div className="col-md-1"></div>
-                <div className="col-md-10 mt-5 border-bottom">
+                <div className="col-md-10 mt-5 border-bottom" id={styles.fazzPayBot}>
                   <h2 className={`${styles.title}`}>FazzPay</h2>
                   <p className={`${styles.botDesc} mt-3 mb-5`}>
                     Simplify financial needs and saving <br /> much time in banking needs with <br /> one single app.
@@ -215,7 +215,7 @@ export default function Home() {
                 <div className="col-md-1"></div>
                 <div className="col-md-10 d-flex justify-content-between">
                   <p className={`${styles.botDesc} mb-5`}>2022 FazzPay. All right reserved.</p>
-                  <div className="d-flex gap-3">
+                  <div className={`${styles.botRightDesc} d-flex gap-3`}>
                     <p className={`${styles.botDesc} mb-5`}>+62 5637 8882 9901</p>
                     <p className={`${styles.botDesc} mb-5`}>contact@fazzpay.com</p>
                   </div>

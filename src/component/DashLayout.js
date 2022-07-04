@@ -86,7 +86,7 @@ export const DashLayout = ({ children, title }) => {
                 <h1 className={`${styles.titleDash}`}>FazzPay</h1>
               </div>
 
-              <div className="col-md-8 text-center mt-5 mb-4 d-flex justify-content-end align-items-center gap-4">
+              <div className={`col-md-8 text-center mt-5 mb-4 d-flex justify-content-end align-items-center gap-4`} id={styles.topDashContent}>
                 <Image src={user.image ? `${process.env.CLOUDINARY_URL}${user.image}` : require("../assets/img/default-img.webp")} width={50} height={50} className={`${styles.imageDash}`}></Image>
                 <div>
                   <h2 className={`${styles.nameDash} m-0`}>{`${user.firstName ? user.firstName : "John"} ${user.lastName ? user.lastName : "Doe"}`}</h2>
@@ -161,7 +161,7 @@ export const DashLayout = ({ children, title }) => {
               <div className="col-md-1"></div>
               <div className="col-md-10 d-flex justify-content-between align-items-center">
                 <p className={`${styles.botDesc} mt-3`}>2022 FazzPay. All right reserved.</p>
-                <div className="d-flex gap-3">
+                <div className={`${styles.botRightDesc} d-flex gap-3`}>
                   <p className={`${styles.botDesc} mt-3`}>+62 5637 8882 9901</p>
                   <p className={`${styles.botDesc} mt-3`}>contact@fazzpay.com</p>
                 </div>

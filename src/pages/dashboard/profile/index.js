@@ -79,7 +79,7 @@ const Profile = () => {
       {loading && <Loading />}
 
       <DashLayout title={"Zwallet - Profile"}>
-        <div className="col-md-8 my-5 ms-4">
+        <div className="col-md-8 my-5 ms-4" id={styles.dashTop}>
           <div className="row">
             <div className={`${styles.midContentDashBot} col-md-12`}>
               <div className="row">

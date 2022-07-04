@@ -132,7 +132,7 @@ const Dashboard = () => {
         }}
       />
       <DashLayout title={"Zwallet - Dashboard"}>
-        <div className="col-md-8 my-5 ms-4">
+        <div className={`col-md-8 my-5 ms-4`} id={styles.dashTop}>
           <div className={`row ${styles.midContentDashTop} mb-4`}>
             <div className="col-md-6 mb-3">
               <p className={`${styles.balanceTitle} mt-4`}>Balance</p>
@@ -191,7 +191,7 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className={`col-md-4 ${styles.midContentDashBot} ps-4`}>
+            <div className={`col-md-4 ${styles.midContentDashBot} ps-4`} id={styles.midContentDashBot}>
               <div className="row">
                 <div className="col-md-8">
                   <h2 className={`${styles.transTitle} mt-3`}>Transaction History</h2>
@@ -212,7 +212,7 @@ const Dashboard = () => {
               ) : (
                 history.map((item, i) => (
                   <div className="row mb-3" key={i}>
-                    <div className="col-md-6 d-flex gap-3 mt-4">
+                    <div className="col-md-6 d-flex gap-3 mt-4" id={styles.historyItemDash}>
                       <div className="">
                         <Image src={item.image ? `${process.env.CLOUDINARY_URL}${item.image}` : require("assets/img/default-img.webp")} className={styles.defaultImg} width={50} height={50} />
                       </div>

@@ -11,7 +11,7 @@ const ProfileDetail = () => {
   return (
     <>
       <DashLayout title={"Zwallet - Profile Detail"}>
-        <div className="col-md-8 my-5 ms-4">
+        <div className="col-md-8 my-5 ms-4" id={styles.dashTop}>
           <div className="row justify-content-around">
             <div className={`col-md-12 ${styles.midContentDashBot}`}>
               <div className="row mt-0 m-5 mb-2 pt-4 p-3 ps-0">
@@ -30,9 +30,19 @@ const ProfileDetail = () => {
                 </div>
               </div>
               <div className={`row mt-0 m-5 mb-4 pt-4 p-3 pb-2 ${styles.confirmTrans}`}>
-                <div className="col-md-12">
+                <div className="col-md-8">
                   <h3 className={`${styles.transStatus}`}>Last Name</h3>
                   <p className={`${styles.transName} mt-3`}>{user.lastName}</p>
+                </div>
+                <div className="col-md-4 text-end">
+                  <p
+                    className={`${styles.manageText} mt-3`}
+                    onClick={() => {
+                      router.push("/dashboard/profile/edit-name");
+                    }}
+                  >
+                    Manage
+                  </p>
                 </div>
               </div>
               <div className={`row mt-0 m-5 mb-4 pt-4 p-3 pb-2 ${styles.confirmTrans}`}>

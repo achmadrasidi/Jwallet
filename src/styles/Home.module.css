@@ -1,3 +1,25 @@
+@media (max-width: 768px) {
+  .featureTitle {
+    /* identical to box height, or 155% */
+    text-align: center;
+    /* Zwallet/Primary */
+  }
+  #featureLayout {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  .featCard {
+    width: 100% !important;
+  }
+  .botRightDesc {
+    flex: 1;
+    justify-content: space-evenly;
+  }
+  #fazzPayBot {
+    text-align: center;
+  }
+}
+
 .topHome {
   background-image: url("../assets/img/bg-home.png");
 
@@ -129,6 +151,18 @@
   background-color: #f8f8f8;
 }
 .reasonTitle {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 93px;
+  /* identical to box height, or 155% */
+
+  /* Zwallet/Primary */
+
+  color: #3a3d42;
+}
+.featureTitle {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 800;
