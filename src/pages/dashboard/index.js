@@ -70,7 +70,7 @@ const Dashboard = () => {
   const [history, setHistory] = useState([]);
   const router = useRouter();
   const { id, token } = useSelector((state) => state.persist.user.userInfo);
-  const user = useSelector((state) => state.persist.user.userDetail);
+  const user = useSelector((state) => state.persist.user.userDetail) || {};
   const currencyFormatter = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 });
   const { listIncome = [], listExpense = [] } = dashboard;
 
