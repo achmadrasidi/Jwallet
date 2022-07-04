@@ -1,0 +1,33 @@
+.notfound {
+  margin-top: 15%;
+}
+.pageTitle {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 200px;
+  line-height: 30px;
+  /* identical to box height */
+  margin-bottom: 5%;
+  text-align: center;
+
+  color: #6379f4;
+}
+.upcomingButton {
+  background: #6379f4;
+  border-radius: 20px;
+  height: 74px;
+  width: 100%;
+  border: none;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: white;
+}
