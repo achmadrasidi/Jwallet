@@ -11,7 +11,7 @@ const NotFound = () => {
           <div className="col-md-12">
             <h1 className={styles.pageTitle}>404</h1>
             <h2>Whoops....</h2>
-            <p>Page you're looking for not found.</p>
+            <p>Page you&apos;re looking for not found.</p>
             <button
               className={`${styles.upcomingButton} w-50 mb-5`}
               onClick={() => {
