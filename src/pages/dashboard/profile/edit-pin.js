@@ -7,6 +7,7 @@ import { useState } from "react";
 
 import { PinInput } from "react-input-pin-code";
 import ToastMessage from "component/Sub/Toast";
+import { useRouter } from "next/router";
 
 const EditPin = () => {
   const [error, setError] = useState(null);
@@ -14,7 +15,7 @@ const EditPin = () => {
   const [nextStep, setNextStep] = useState(false);
   const [loading, setLoading] = useState(null);
   const [values, setValues] = useState(["", "", "", "", "", ""]);
-
+  const router = useRouter();
   const { id, token } = useSelector((state) => state.persist.user.userInfo);
   const checkPin = (e) => {
     e.preventDefault();
@@ -50,6 +51,7 @@ const EditPin = () => {
         setNextStep(false);
         ToastMessage({ type: "success", message: result.data.msg });
         setValues(["", "", "", "", "", ""]);
+        router.push("/dashboard/profile");
       })
       .catch((err) => {
         setLoading(false);

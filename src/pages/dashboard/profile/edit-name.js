@@ -7,13 +7,14 @@ import axios from "axios";
 import { useState } from "react";
 import { userDetail } from "reduxStore/Actions/UserAction";
 import ToastMessage from "component/Sub/Toast";
+import { useRouter } from "next/router";
 
 const EditName = () => {
   const [firstName, setFirstName] = useState(null);
   const [lastName, setLastName] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(null);
-
+  const router = useRouter();
   const dispatch = useDispatch();
   const { id, token } = useSelector((state) => state.persist.user.userInfo);
   const updateName = () => {
@@ -35,6 +36,7 @@ const EditName = () => {
         setLoading(false);
         dispatch(userDetail());
         ToastMessage({ type: "success", message: result.data.msg });
+        router.push("/dashboard/profile");
       })
       .catch((err) => {
         setLoading(false);

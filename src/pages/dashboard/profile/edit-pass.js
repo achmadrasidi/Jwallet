@@ -6,6 +6,7 @@ import { Eye, EyeSlash, Lock } from "react-bootstrap-icons";
 import axios from "axios";
 import { useState } from "react";
 import ToastMessage from "component/Sub/Toast";
+import { useRouter } from "next/router";
 
 const EditPassword = () => {
   const [error, setError] = useState(null);
@@ -20,6 +21,8 @@ const EditPassword = () => {
     newPass: null,
     confirm: null,
   });
+
+  const router = useRouter();
 
   const { id, token } = useSelector((state) => state.persist.user.userInfo);
   const updatePassword = () => {
@@ -43,6 +46,7 @@ const EditPassword = () => {
       .then((result) => {
         setLoading(false);
         ToastMessage({ type: "success", message: result.data.msg });
+        router.push("/dashboard/profile");
       })
       .catch((err) => {
         setLoading(false);

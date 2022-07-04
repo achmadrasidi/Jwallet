@@ -7,12 +7,13 @@ import axios from "axios";
 import { useState } from "react";
 import { userDetail } from "reduxStore/Actions/UserAction";
 import ToastMessage from "component/Sub/Toast";
+import { useRouter } from "next/router";
 
 const EditPhone = () => {
   const [phone, setPhone] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(null);
-
+  const router = useRouter();
   const dispatch = useDispatch();
   const { id, token } = useSelector((state) => state.persist.user.userInfo);
   const updatePhone = () => {
@@ -34,6 +35,7 @@ const EditPhone = () => {
         setLoading(false);
         dispatch(userDetail());
         ToastMessage({ type: "success", message: result.data.msg });
+        router.push("/dashboard/profile");
       })
       .catch((err) => {
         setLoading(false);
